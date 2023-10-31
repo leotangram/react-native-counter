@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { isAndroid } from '../../utils/platformOS';
+import { PrimaryButton } from '../components';
 
 export const CounterScreen = () => {
   const [count, setCount] = useState(10);
@@ -7,9 +9,11 @@ export const CounterScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{count}</Text>
-      <Pressable onPress={() => setCount(currentCount => currentCount + 1)}>
-        <Text>+1</Text>
-      </Pressable>
+      <PrimaryButton
+        label="Incrementar"
+        onPress={() => setCount(currentCount => currentCount + 1)}
+        onLongPress={() => {}}
+      />
     </View>
   );
 };
