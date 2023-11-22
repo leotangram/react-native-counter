@@ -1,7 +1,7 @@
 import { SafeAreaView, StyleSheet } from 'react-native';
 import { PaperProvider } from 'react-native-paper';
 import IonIcon from 'react-native-vector-icons/Ionicons';
-import { CounterM3Screen } from './src/presentation/screens/CounterM3Screen';
+import { BoxObjectModelScreen } from './src/presentation/screens/BoxObjectModelScreen';
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
         icon: props => <IonIcon {...props} />,
       }}>
       <SafeAreaView style={styles.container}>
-        <CounterM3Screen />
+        <BoxObjectModelScreen />
       </SafeAreaView>
     </PaperProvider>
   );
